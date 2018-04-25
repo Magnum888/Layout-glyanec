@@ -1,0 +1,547 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+.head
+    display: flex
+    flex-direction: row
+    justify-content: center
+    background: #FFFFFF
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05)
+    &__logo
+        background: url('../img/Logo.png') no-repeat
+        width: 258px
+        height: 77px
+        margin-top: 17px
+        margin-bottom: 12px
+        margin-right: 62px
+    &__info
+        width: 375px
+        display: flex
+        flex-direction: column
+        margin-right: 50px
+        &--title
+            text-align: center
+            color: #3A4047
+            line-height: normal
+            font-size: 16px
+            font-family: ClearSansRegular
+            margin-top: 17px
+            margin-bottom: 11px
+        &--time 
+            text-align: center
+            color: #3A4047
+            font-family: ClearSansBold
+            line-height: normal
+            font-size: 14px
+    &__cabinet
+        display: inline-flex
+        margin-top: 25px
+        margin-right: 22px
+        &--user 
+            background: url('../img/user.svg') no-repeat
+            width: 13px
+            height: 13px
+            margin-right: 7.44px
+            margin-top: 1px
+        &--user-name
+            font-family: Clear Sans
+            line-height: normal
+            font-size: 14px
+            text-align: justify
+            color: #3A4047
+            .user-link
+                color: #3A4047
+    &__contact
+        display: flex
+        flex-direction: column
+        margin-top: 22px
+        margin-right: 19px
+        &--mail
+            font-family: ClearSansRegular;
+            line-height: normal
+            font-size: 14px
+            text-align: right
+            text-decoration-line: underline
+            color: #3A4047
+            margin-bottom: 22px
+        &--social
+            display: flex
+            flex-direction: row
+            align-items: center
+            margin: 0
+            position: relative
+            .facebook-link
+                margin-right: 21px
+                max-height: 22px
+            .head-phone
+                display: flex
+                flex-direction: row
+                align-items: center
+                &__logo
+                    margin-right: 9px
+                    max-height: 22px
+                &__number
+                    font-size: 16px
+                    font-family: ClearSansBold
+                    margin-right: 6px
+                &__btn
+                    width: 20px
+                    height: 20px
+                    background: url('../img/Ellipse.jpg') no-repeat
+                    cursor: pointer
+                    position: relative
+                    &--arrow
+                        position: absolute
+                        bottom: -1px
+                        left: 5px
+                        &:before
+                            content: url('../img/Shape.png')
+                            width: 4px
+                            height: 8px
+            .head-phone-list[data-show="false"]
+                display: none
+            .head-phone-list[data-show-button="false"]
+                display: none
+            .head-phone-list
+                width: 219px
+                height: 167px
+                padding-left: 29px
+                display: flex
+                flex-direction: column
+                background: #FFFFFF
+                position: absolute
+                top: 43px
+                left: 10px
+                z-index: 2
+                &__vodafone
+                    display: flex
+                    flex-direction: row
+                    margin-bottom: 20px
+                    margin-top: 31px
+                    .vd-logo
+                        width: 25px
+                        height: 25px
+                        margin-right: 11px
+                    .vd-number
+                        font-size: 16px
+                        line-height: 19px
+                &__kievstar
+                    display: flex
+                    flex-direction: row
+                    margin-bottom: 20px
+                    .ks-logo
+                        width: 25px
+                        height: 25px
+                        margin-right: 11px
+                    .ks-number
+                        font-size: 16px
+                        line-height: 19px
+                &__lifecell
+                    display: flex
+                    flex-direction: row
+                    margin-bottom: 33px
+                    .lf-logo
+                        width: 25px
+                        height: 25px
+                        margin-right: 11px
+                    .lf-number
+                        font-size: 16px
+                        line-height: 19px
+                &__square
+                    position: absolute
+                    background: #FFFFFF
+                    transform: rotate(-45deg)
+                    width: 28px
+                    height: 28px
+                    right: 6px
+                    top: -4px
+
+    &__cart
+        margin-top: 30px
+        position: relative
+        &--numb
+            width: 30px
+            height: 30px
+            background: #1AB0CE
+            border-radius: 50%
+            font-size: 14px
+            text-align: center
+            font-family: ClearSansBold
+            line-height: 16px
+            color: #FFFFFF
+            padding-top: 7px
+            position: absolute
+            bottom: 55px
+            left: 25px
+.underhead
+    display: flex
+    flex-direction: row
+    justify-content: center
+    background: #FFFFFF
+    margin-top: 3px
+    border-bottom: 1px solid #E8EDF2
+    &__nav
+        display: flex
+        flex-direction: row
+        width: 100%
+        max-width: 1166px
+        padding: 0
+        justify-content: space-between
+        margin: 0
+        min-height: 57px
+        &--list
+            list-style: none
+            display: flex
+            align-items: center
+            &:hover
+                border-top: 1px solid #1AB0CE
+            .item-list
+                text-decoration: none
+                font-family: ClearSansBold
+                line-height: 19px
+                font-size: 16px
+                text-align: center
+                text-transform: uppercase
+                padding: 0 29px
+                border-right: 1px solid #E8EDF2
+                color: #3A4047
+                &:hover
+                    color: #1AB0CE
+                &--first
+                    padding-left: 0
+                &--last
+                    padding-right: 0
+                    border-right: 0
+                    width: 18px
+                    height: 18px
+                    background: url('../img/search.png') no-repeat center
+                    background-size: contain
+        .burger
+            width: 48px
+            height: 48px
+            display: none
+            &--item
+                height: 8px
+                margin-bottom: 8px
+                background-color: #1ab0ce
+.main
+    &__image
+        min-height: 500px
+        height: 100vh
+        background: url('../img/ist.png') no-repeat center
+        background-size: cover
+        position: relative
+        &--rectangle
+            position: absolute
+            top: 0
+            left: 0
+            opacity: .3
+            width: 100%
+            height: 100%
+            z-index: 0
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        &--center
+            position: relative
+            z-index: 1
+        .txt-center
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-content: center
+            height: 100%
+            &__head
+                font-family: ClearSansBold
+                font-size: 57px
+                line-height: 67px
+                color: #FFFFFF
+                margin: 0
+                text-align: center
+                margin-bottom: 10px
+            &__hr
+                border: 2px solid #FFFFFF
+                width: 120px
+                margin-bottom: 15px
+            &__delivery
+                font-size: 24px
+                line-height: 28px
+                color: #FFFFFF
+                text-align: center
+                margin-bottom: 27px
+                font-weight: 400
+            &__button
+                text-align: center
+                &--btn
+                    width: 200px
+                    height: 48px
+                    border-color: #1AB0CE
+                    border-radius: 2px
+                    border: 0
+                    background: #1AB0CE
+                    font-family: ClearSansBold
+                    font-size: 16px
+                    line-height: 19px
+                    color: #FFFFFF
+                    cursor: pointer
+    &__poduct-title
+        font-family: ClearSansRegular
+        line-height: 42px
+        font-size: 36px
+        text-align: center
+        color: #3A4047
+        margin-top: 29px
+        margin-bottom: 0
+        font-weight: 400
+    &__product-subtitle
+        font-family: ClearSansRegular
+        line-height: 28px
+        font-size: 24px
+        text-align: center
+        color: #3A4047
+        margin-top: 13px
+        margin-bottom: 0
+        font-weight: 400
+    &__product-txt
+        margin-top: 34px
+        margin-bottom: 13px
+        font-size: 14px
+        line-height: 16px
+        text-align: justify
+        max-width: 1166px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+    &__product-hr
+        border: 1px solid #E8EDF2
+    &__product
+        display: flex
+        flex-direction: row
+        justify-content: center
+        margin-top: 44px
+        &--list
+            display: flex
+            flex-direction: row
+            background: #FFFFFF
+            border: 1px solid #DCE1E6
+            box-sizing: border-box
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05)
+            padding-left: 29px
+            padding-right: 29px
+            padding-bottom: 26px
+            max-width: 370px
+            max-height: 291px
+            width: 100%
+            &:nth-child(1)
+                margin-right: 30px
+            &:nth-child(2)
+                margin-right: 30px
+            .img-office
+                background: url('../img/blank-page.png') no-repeat center
+                width: 52px
+                height: 62px
+                margin-top: 25px
+                margin-right: 38px
+            .img-advertising
+                @extend .img-office
+                background: url('../img/road-map.png') no-repeat center
+            .img-busines
+                @extend .img-office
+                background: url('../img/book.png') no-repeat center
+            &-item
+                margin: 0
+            .block-poduct-title
+                font-family: ClearSansBold
+                font-size: 16px
+                line-height: 19px
+                text-transform: uppercase
+                color: #3A4047
+                padding-bottom: 24px
+                margin: 0
+                margin-top: 29px
+                color: #3A4047
+                &--list
+                    text-decoration: none
+                    color: #3A4047
+            .column-wrap
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+            .block-product-item
+                margin-bottom: 0
+                margin-top: 0
+                &--one
+                    font-family: ClearSansRegular
+                    text-decoration: none
+                    line-height: 16px
+                    font-size: 14px
+                    color: #3A4047
+                    font-weight: normal
+    &__news
+        display: flex
+        flex-direction: row
+        justify-content: center
+        margin-top: 44px
+        &--list
+            display: flex
+            flex-direction: column
+            text-align: center
+            background: #FFFFFF
+            box-sizing: border-box
+            padding-left: 14px
+            padding-right: 18px
+            max-width: 370px
+            max-height: 170px
+            width: 100%
+            &-time
+                font-family: ClearSansRegular
+                line-height: 16px
+                font-size: 14px
+                color: #BEC7D1
+                margin-top: 29px
+            &-text
+                line-height: 19px
+                font-size: 16px
+                margin-top: 14px
+                margin-bottom: 54px
+                text-decoration: none
+                color: #3A4047
+                &:hover
+                    text-decoration: underline
+                    color: #1AB0CE
+                    cursor: pointer
+            &:nth-child(1)
+                margin-right: 30px
+            &:nth-child(2)
+                margin-right: 30px
+        &--list:hover
+            box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.05), 0px -1px 0px #1AB0CE
+        &--btn
+            text-align: center
+            &-show
+                margin-top: 51px
+                margin-bottom: 49px
+                border: 1px solid #1AB0CE
+                background: #FFFF
+                box-sizing: border-box
+                border-radius: 2px
+                width: 190px
+                height: 32px
+                color: #1AB0CE
+                font-size: 14px
+                line-height: 16px
+                cursor: pointer
+.block-footer
+    background: #F7F7F7
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05)
+    min-height: 159px
+    display: flex
+    justify-content: center
+.footer
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    max-width: 1166px
+    width: 100%
+    justify-content: space-between
+    &__logo
+        display: flex
+        flex-direction: column
+        padding-top: 19px
+        &--img
+            background: url('../img/Logo.png') no-repeat
+            width: 258px
+            height: 77px
+            margin-bottom: 14px
+        &--policy
+            color: #3A4047
+            font-size: 14px
+            line-height: 16px
+    &__info
+        max-width: 261px
+        padding-top: 22px
+        &--txt
+            line-height: 21px
+            font-size: 14px
+            color: #3A4047
+            margin-bottom: 25px
+        &--hour
+            line-height: 16px
+            font-size: 14px
+    &__menu
+        display: flex
+        flex-direction: row
+        padding-top: 22px
+        &--list
+            padding: 0
+            margin: 0
+            &:first-child
+                padding-right: 67px
+        .link-menu
+            list-style-type: none
+            padding-bottom: 15px
+            &__footer
+                margin-bottom: 16px
+                line-height: 21px
+                font-size: 14px
+                color: #3A4047
+    &__contact
+        display: flex
+        flex-direction: column
+        padding-top: 22px
+        padding-bottom: 24px
+        justify-content: space-between
+        .head-phone-list
+            top: -177px
+            &__square
+                top: 144px
+        .head__contact
+            margin: 0
+        .head-phone__btn
+            background: #FFFFFF
+            border-radius: 50%
+        &--link
+            text-align: right
+            padding-bottom: 15px
+            &-cont
+                margin-bottom: 16px
+                line-height: 21px
+                font-size: 14px
+                color: #3A4047
+    .dev-info
+        text-align: right
+        max-height: 17px
+        height: 100%
+        order: 2
+        &__img
+            width: 17px
+            height: 16px
+            vertical-align: top
+        &__name
+            font-family: 'Cuprum', sans-serif
+            font-size: 11px
+            line-height: 13px
+            text-transform: uppercase
+            color: #3A4047
+            vertical-align: text-top
+            text-decoration: none
+.flex-block
+    display: flex
+    justify-content: space-between
+    max-width: 560px
+    width: 100%
+
+.call
+    width: 100px
+    height: 100px
+    // opacity: 0.3
+    position: fixed
+    bottom: 110px
+    right: 0
+    display: none
+    text-indent: -9999px
+    background: url('../img/call.png') no-repeat center
+    background-size: cover
+
+
+@import "media" // Всегда в конце

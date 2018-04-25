@@ -1,0 +1,17 @@
+@media only screen and (max-width: 514px), only screen and (max-device-width: 514px) {
+    #nav > li {
+        display: none;
+    }
+    
+    #burger {
+        display: inline-block;
+    }
+    
+    #nav:hover #burger {
+        display: none;
+    }
+    
+    #nav:hover >li {
+        display: block;
+    }
+}
